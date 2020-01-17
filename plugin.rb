@@ -5,5 +5,5 @@
 
 register_asset "javascripts/discourse/templates/connectors/above-site-header/ht-header.hbs"
 register_asset "javascripts/discourse/templates/connectors/above-footer/ht-footer.hbs"
-register_asset "javascripts/discourse/initializers/ht-scripts.js"
-register_asset "stylesheets/ht-styles.css"
+register_asset "javascripts/discourse/initializers/ht-scripts.js.es6"
+register_asset "stylesheets/ht-styles.scss"
