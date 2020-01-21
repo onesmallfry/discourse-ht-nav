@@ -1,15 +1,14 @@
 # discourse-ht-nav
-Load forum header and footer from main hearing tracker site
+Load forum header/nav and footer from main Hearing Tracker site.
+
+This only sets up discourse plugin structure and config -- content will be loaded on build (see below).
+
+Discourse/plugin needs to be rebuilt upon main site header/footer changes.
+
 
 ## Populate header/footer connectors files
-### Staging
-curl -u USER:PASS https://staging.hearingtracker.com/forum_header > /var/www/discourse/plugins/discourse-ht-nav/assets/javascripts/discourse/templates/connectors/above-site-header/ht-header.hbs
+curl [MAIN SERVER HEADER/NAV ROUTE] > /var/www/discourse/plugins/discourse-ht-nav/assets/javascripts/discourse/templates/connectors/above-site-header/ht-header.hbs
 
-curl -u USER:PASS https://staging.hearingtracker.com/forum_footer > /var/www/discourse/plugins/discourse-ht-nav/assets/javascripts/discourse/templates/connectors/above-footer/ht-footer.hbs
+curl [MAIN SERVER FOOTER ROUTE] > /var/www/discourse/plugins/discourse-ht-nav/assets/javascripts/discourse/templates/connectors/above-footer/ht-footer.hbs
 
-* replace USER & PASS with appropriate staging server credentials
-
-### Production
-curl https://www.hearingtracker.com/forum_header > /var/www/discourse/plugins/discourse-ht-nav/assets/javascripts/discourse/templates/connectors/above-site-header/ht-header.hbs
-
-curl https://www.hearingtracker.com/forum_footer > /var/www/discourse/plugins/discourse-ht-nav/assets/javascripts/discourse/templates/connectors/above-footer/ht-footer.hbs
+* HT server credentials may be necessary (e.g. if connecting to staging)
